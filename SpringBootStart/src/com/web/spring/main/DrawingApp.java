@@ -55,7 +55,7 @@ public class DrawingApp
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConstructor.xml");
 			
 		//use "constructor-arg" inside xml file under bean block to initialize value and note 
-		//it only takes one argument and that is of "value"..... No id is needed for it
+		// No id is needed for it
 		//calling triangle from spring.xml and casting it to the object of triangle class i.e 
 		//triangle using Application Context
 		//move the spring.xml to src folder and run the project
@@ -67,18 +67,42 @@ public class DrawingApp
 		
 		//*********************** APPLICATION CONTEXT WITH Multiple CONSTRUCTORS ***********************
 		
-		//reading the configuration using Application Context 
+	/*	//reading the configuration using Application Context 
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConstructorWithMultipleArguments.xml");
 			
 		//use "constructor-arg" twice inside xml file under bean block to initialize value and note 
-		//it only takes one argument and that is of "value"..... No id is needed for it
+		// No id is needed for it
 		//calling triangle from spring.xml and casting it to the object of triangle class i.e 
 		//triangle using Application Context
 		//move the spring.xml to src folder and run the project
 					
 		triangle triangle = (triangle) context.getBean("triangle");
 		triangle.draw();
+	*/
+		
+		//*********************** INJECTING OBJECTS ***********************
+		
+		//reading the configuration using Application Context 
+			
+		ApplicationContext context = new ClassPathXmlApplicationContext("SpringInjectingObjects.xml");
+		
+		System.out.println("Using Point Class");
+		Point point0 = (Point) context.getBean("point0");
+		point0.points();	
+		
+		Point point1 = (Point) context.getBean("point1");
+		point1.points();
+		
+		Point point2 = (Point) context.getBean("point2");
+		point2.points();
+		
+		System.out.println("Using InjectingObjects Class");
+		
+		ApplicationContext context1 = new ClassPathXmlApplicationContext("SpringInjectingObjects.xml");
+		InjectingObjects points = (InjectingObjects) context1.getBean("InjectingObjects");
+		points.points();
+		
 		
 	}
 
