@@ -85,7 +85,7 @@ public class DrawingApp
 		
 		//reading the configuration using Application Context 
 			
-		ApplicationContext context = new ClassPathXmlApplicationContext("SpringInjectingObjects.xml");
+	/*	ApplicationContext context = new ClassPathXmlApplicationContext("SpringInjectingObjects.xml");
 		
 		System.out.println("Using Point Class");
 		Point point0 = (Point) context.getBean("point0");
@@ -102,8 +102,31 @@ public class DrawingApp
 		ApplicationContext context1 = new ClassPathXmlApplicationContext("SpringInjectingObjects.xml");
 		InjectingObjects points = (InjectingObjects) context1.getBean("InjectingObjects");
 		points.points();
+	*/	
 		
 		
+		
+		//*********************** INNER BEANS ***********************
+		
+		
+	/*	
+		ApplicationContext context1 = new ClassPathXmlApplicationContext("SpringInnerBeans.xml");
+		InjectingObjects points = (InjectingObjects) context1.getBean("InjectingObjects");
+		points.points();
+	*/
+	
+	
+		//*********************** List of Points ***********************
+		
+		ApplicationContext context1 = new ClassPathXmlApplicationContext("SpringPointsList.xml");
+		PointsList points = (PointsList) context1.getBean("PointsList");
+		points.points();
+		
+		
+	
 	}
+	
+	
+	
 
 }
