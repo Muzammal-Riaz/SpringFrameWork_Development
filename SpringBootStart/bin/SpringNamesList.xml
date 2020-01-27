@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id = "NamesList" class =  "com.web.spring.main.Names_list">
+		<property name="names">
+			<list>
+				<ref bean = "Name0" />
+				<ref bean = "Name1" />
+				<ref bean = "Name2" />
+				<ref bean = "Name3" />
+				<ref bean = "Name4" />
+				<ref bean = "Name5" />
+			
+			</list>
+		
+		</property>
+    </bean>
+    
+    
+    <bean id = "Name0" class =  "com.web.spring.main.Names">
+	<property name = "x" value = "Virat Kohli" />
+	
+	</bean>
+
+	<bean id = "Name1" class =  "com.web.spring.main.Names">
+	<property name = "x" value = "Steven Smith" />
+	
+	</bean>
+	
+	<bean id = "Name2" class =  "com.web.spring.main.Names">
+	<property name = "x" value = "Babar Azam" />
+	</bean>
+	
+	<bean id = "Name3" class =  "com.web.spring.main.Names">
+	<property name = "x" value = "Kane Williamson" />
+	</bean>
+	
+	<bean id = "Name4" class =  "com.web.spring.main.Names">
+	<property name = "x" value = "Joe Root" />
+	</bean>
+	
+	<bean id = "Name5" class =  "com.web.spring.main.Names">
+	<property name = "x" value = "Rohit Sharma" />
+	</bean>
+	
+</beans>
+		

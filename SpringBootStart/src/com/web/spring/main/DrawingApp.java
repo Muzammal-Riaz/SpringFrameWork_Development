@@ -116,12 +116,19 @@ public class DrawingApp
 	*/
 	
 	
-		//*********************** List of Points ***********************
+	/*	//*********************** List of Points ***********************
 		
 		ApplicationContext context1 = new ClassPathXmlApplicationContext("SpringPointsList.xml");
 		PointsList points = (PointsList) context1.getBean("PointsList");
 		points.points();
 		
+	*/
+		
+		//*********************** List of Names ***********************
+		
+		ApplicationContext context1 = new ClassPathXmlApplicationContext("SpringNamesList.xml");
+		Names_list names = (Names_list) context1.getBean("NamesList");
+		names.print_names();
 		
 	
 	}
